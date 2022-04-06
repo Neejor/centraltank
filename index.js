@@ -41,15 +41,15 @@ console.log(options)
 let p1 = 5, p2 = 5;
 
 app.post("/sendValues", (req,res) => {
-	const {FamilyMembers, Guest, PumpId} = req.body;
+	const {FamilyMembers, Guests, PumpId} = req.body;
 
-	newVal = Math.round(mlr.predict([parseInt(FamilyMembers), parseInt(Guest)]));
-	if(PumpId === parseInt(1))
+	newVal = Math.round(mlr.predict([parseInt(FamilyMembers), parseInt(Guests)]));
+	if(PumpId === (1))
 		p1 = newVal.toString();
 	else 
 		p2 = newVal.toString();
-	console.log(req.body);
-	res.send(newVal);
+	console.log(newVal);
+	res.send({newVal});
 });
 
 app.get("/getPredictedVal", (req,res) => {
