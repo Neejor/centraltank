@@ -48,11 +48,11 @@ app.post("/sendValues", (req,res) => {
 	// 	PumpId: ,
 	// }
 	console.log(req.body);
-	res.send("JSD");
+	res.send(req.body);
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({val: "213", updatedValue: "true"});
+	res.json({val: "909", updatedValue: "false"});
 })
 
 app.get('/', function(req, res) {
