@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "ml-regression-multivariate-linear": "^2.0.3",
+    "papaparse": "^5.3.2",
+    "request": "^2.88.2"
   }
 }
