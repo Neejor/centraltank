@@ -40,7 +40,7 @@ console.log(options)
 
 
 app.get("/getPredictedVal", (req,res) => {
-	res.send({val: "3", updatedValue: false});
+	res.json({val: "3", updatedValue: false});
 })
 
 app.get('/', function(req, res) {
