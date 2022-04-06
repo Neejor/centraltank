@@ -44,11 +44,14 @@ app.post("/sendValues", (req,res) => {
 	const {FamilyMembers, Guests, PumpId} = req.body;
 
 	newVal = Math.round(mlr.predict([parseInt(FamilyMembers), parseInt(Guests)]));
+	console.log("Old p1: ", p1);
+	console.log("Old p2: ", p2);
 	if(PumpId === (1))
 		p1 = newVal.toString();
 	else 
 		p2 = newVal.toString();
-	console.log(newVal);
+	console.log("New p1: ",typeof(p1));
+	console.log("New p2: ",typeof(p2));
 	res.send({newVal});
 });
 
