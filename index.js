@@ -49,7 +49,7 @@ app.post("/sendValues", (req,res) => {
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({val: "59", updatedValue: false});
+	res.json({val: "235", updatedValue: false});
 })
 
 app.get('/', function(req, res) {
