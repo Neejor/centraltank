@@ -38,17 +38,18 @@ console.log(options)
 		console.log(Math.round(mlr.predict([7, 4])));
 	});
 
-app.post("/submitValues", (req,res) => {
+app.post("/sendValues", (req,res) => {
 	const data = req.body;
 	// {
 	// 	FamilyMembers: ,
 	// 	Guest: ,
 	// 	PumpId: ,
 	// }
+	console.log(data);
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({val: "23", updatedValue: false});
+	res.json({val: "59", updatedValue: false});
 })
 
 app.get('/', function(req, res) {
