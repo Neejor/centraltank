@@ -38,6 +38,8 @@ console.log(options)
 		console.log(Math.round(mlr.predict([7, 4])));
 	});
 
+let p1 = -1, p2 = -1;
+
 app.post("/sendValues", (req,res) => {
 	const data = req.body;
 	// {
@@ -45,11 +47,12 @@ app.post("/sendValues", (req,res) => {
 	// 	Guest: ,
 	// 	PumpId: ,
 	// }
-	console.log(data);
+	console.log(req.body);
+	res.send("JSD");
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({val: "452", updatedValue: "true"});
+	res.json({val: "634", updatedValue: "false"});
 })
 
 app.get('/', function(req, res) {
