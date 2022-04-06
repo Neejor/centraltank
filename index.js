@@ -43,17 +43,17 @@ let p1 = 5, p2 = 5;
 app.post("/sendValues", (req,res) => {
 	const {FamilyMembers, Guest, PumpId} = req.body;
 
-	mlr = new MLR(FamilyMembers, Guest);
-	if(PumpId === 1)
+	mlr = new MLR(parseInt(FamilyMembers), parseInt(Guest));
+	if(PumpId === parseInt(1))
 		p1 = mlr;
 	else 
 		p2 = mlr;
 	console.log(req.body);
-	res.send(req.body);
+	res.send(mlr);
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({p1: "50", p2: "60"});
+	res.json({p1: "11", p2: "22"});
 })
 
 app.get('/', function(req, res) {
