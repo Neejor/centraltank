@@ -38,7 +38,7 @@ console.log(options)
 		console.log(Math.round(mlr.predict([7, 4])));
 	});
 
-let p1 = 5, p2 = 5;
+let p1 = "5", p2 = "5";
 
 app.post("/sendValues", (req,res) => {
 	const {FamilyMembers, Guests, PumpId} = req.body;
