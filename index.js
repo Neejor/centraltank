@@ -45,15 +45,15 @@ app.post("/sendValues", (req,res) => {
 
 	newVal = Math.round(mlr.predict([parseInt(FamilyMembers), parseInt(Guest)]));
 	if(PumpId === parseInt(1))
-		p1 = newVal;
+		p1 = newVal.toString();
 	else 
-		p2 = newVal;
+		p2 = newVal.toString();
 	console.log(req.body);
 	res.send(newVal);
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({p1: "67", p2: "87"});
+	res.json({p1: p1, p2: p2});
 })
 
 app.get('/', function(req, res) {
