@@ -41,18 +41,15 @@ console.log(options)
 let p1 = -1, p2 = -1;
 
 app.post("/sendValues", (req,res) => {
-	const data = req.body;
-	// {
-	// 	FamilyMembers: ,
-	// 	Guest: ,
-	// 	PumpId: ,
-	// }
+	const {FamilyMembers, Guest, PumpId} = req.body;
+
+	mlr = new MLR()
 	console.log(req.body);
 	res.send(req.body);
 });
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({val: "39", updatedValue: "69"});
+	res.json({val: "129", updatedValue: "139"});
 })
 
 app.get('/', function(req, res) {
