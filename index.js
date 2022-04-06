@@ -13,7 +13,7 @@ const MLR = require("ml-regression-multivariate-linear");
 const options = {/* options */};
 // console.log(data);
 console.log(options)
-	const dataStream = fs.createReadStream("./myfile.csv");
+	const dataStream = fs.createReadStream("./myfile1.csv");
 	const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
 
 	dataStream.pipe(parseStream);
@@ -35,12 +35,20 @@ console.log(options)
 	    }
 	    console.log(X);
 	    mlr = new MLR(X, Y);
-		console.log(mlr.predict([3, 3]));
+		console.log(Math.round(mlr.predict([7, 4])));
 	});
 
+app.post("/submitValues", (req,res) => {
+	const data = req.body;
+	// {
+	// 	FamilyMembers: ,
+	// 	Guest: ,
+	// 	PumpId: ,
+	// }
+});
 
 app.get("/getPredictedVal", (req,res) => {
-	res.json({val: "3", updatedValue: false});
+	res.json({val: "23", updatedValue: false});
 })
 
 app.get('/', function(req, res) {
